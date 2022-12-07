@@ -62,12 +62,14 @@ You may need to install additional dependencies if they don't exist on your syst
 
 ```viml
 :Terradoc
-" will download the main branch of hashicorp/terraform-provider-aws repository
-" and extract content of website/docs/*
+" will download the main branch of hashicorp/terraform-provider-aws repository,
+" extract content of website/docs/*,
+" and execute :Rg on it
 
 :Terradoc digitalocean digitalocean tags v2.25.2
-# will download v2.25.2 tagged branch of digitalocean/terraform-provider-digitalocean repository
-# and extract content of docs/*
+" will download v2.25.2 tagged branch of digitalocean/terraform-provider-digitalocean repository,
+" extract content of docs/*,
+" and execute :Rg on it
 ```
 
 ## License
