@@ -3,8 +3,6 @@ if exists('g:terradoc_loaded')
 endif
 let g:terradoc_loaded = 1
 
-let s:terradoc_searcher = get(g:, "terradoc_searcher", "Rg")
-
 function! s:terradoc(
       \ author = 'hashicorp',
       \ provider = 'aws',
@@ -32,19 +30,27 @@ function! s:terradoc(
           \ l:download_dir
           \ )
 
-    echo l:cmd_curl | echom l:cmd_curl
+    echom l:cmd_curl
     call system(l:cmd_curl)
 
-    echo l:cmd_unzip | echom l:cmd_unzip
+    echom l:cmd_unzip
     call system(l:cmd_unzip)
 
-    execute ':cd '.l:download_dir_prefix.'/'.l:download_dir
-    s:terradoc_searcher
+    if exists(':Rg')
+      execute ':cd '.l:download_dir_prefix.'/'.l:download_dir
+      Rg
+    else
+      execute ':Explore '.l:download_dir_prefix.'/'.l:download_dir
+    endif
 
   else
 
-    execute ':cd '.l:download_dir_prefix.'/'.l:download_dir
-    s:terradoc_searcher
+    if exists(':Rg')
+      execute ':cd '.l:download_dir_prefix.'/'.l:download_dir
+      Rg
+    else
+      execute ':Explore '.l:download_dir_prefix.'/'.l:download_dir
+    endif
 
   endif
 endfunction

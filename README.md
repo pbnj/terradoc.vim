@@ -33,7 +33,13 @@ _Recorded using [vhs](https://github.com/charmbracelet/vhs)_
 
 ## Install
 
-Clone or copy/paste the utility script somewhere in your `$PATH`, like `~/.local/bin/`.
+Use your favorite vim plugin manager.
+
+For example, using [vim-plug](https://github.com/junegunn/vim-plug):
+
+```viml
+Plug 'pbnj/terradoc.vim'
+```
 
 You may need to install additional dependencies if they don't exist on your system:
 
