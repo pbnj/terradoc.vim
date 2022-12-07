@@ -51,11 +51,11 @@ You may need to install additional dependencies if they don't exist on your syst
 `:Terradoc` accepts the following arguments in this order:
 
 - author: `hashicorp` (default), or any registry.terraform.io namespace, or
-  github organization.
+    github organization.
 - provider: `aws` (default), `google`, `azure`, ...etc. Any provider from
-  <https://registry.terraform.io/browse/providers> should work
+    <https://registry.terraform.io/browse/providers> should work
 - refs: `heads` (default) or `tags`. If downloading docs for a tagged version,
-  choose `tags` then specify a version (see next argument)
+    choose `tags` then specify a version (see next argument)
 - version: `main` (default) or `vX.Y.Z`
 
 ### Examples
@@ -71,6 +71,12 @@ You may need to install additional dependencies if they don't exist on your syst
 " extract content of docs/*,
 " and execute :Rg on it
 ```
+
+## Todo
+
+- [ ] Vim docs
+- [ ] Give users a better way to specify what to do with downloaded docs (e.g.
+    `:Rg`/`:Files`, `:Explore`, other commands ...etc
 
 ## License
 
