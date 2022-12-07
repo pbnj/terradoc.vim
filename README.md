@@ -76,7 +76,7 @@ You may need to install additional dependencies if they don't exist on your syst
 
 - [ ] Vim docs
 - [ ] Give users a better way to specify what to do with downloaded docs (e.g.
-    `:Rg`/`:Files`, `:Explore`, other commands ...etc
+    `:Rg`/`:Files`, `:Explore`, other commands ...etc)
 
 ## License
 
