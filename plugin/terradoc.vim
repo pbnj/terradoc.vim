@@ -1,7 +1,7 @@
-if exists('g:terradoc_loaded')
+if exists('g:loaded_terradoc')
   finish
 endif
-let g:terradoc_loaded = 1
+let g:loaded_terradoc = 1
 
 function! s:terradoc(
       \ author = 'hashicorp',
