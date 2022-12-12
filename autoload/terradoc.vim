@@ -1,7 +1,6 @@
-if exists('g:loaded_terradoc')
-  finish
-endif
-let g:loaded_terradoc = 1
+" don't spam the user when Vim is started in Vi compatibility mode
+let s:cpo_save = &cpo
+set cpo&vim
 
 function! s:terradoc(
       \ author = 'hashicorp',
@@ -55,6 +54,6 @@ function! s:terradoc(
   endif
 endfunction
 
-command! -nargs=* Terradoc call s:terradoc(<f-args>)
-command! TerradocClean
-      \ terminal ++shell ++close find /tmp/terradoc/* -maxdepth 0 -exec rm -rf {} \;
+" restore Vi compatibility settings
+let &cpo = s:cpo_save
+unlet s:cpo_save
